@@ -6,6 +6,7 @@ const Contact = () => {
     email: "",
     message: "",
   });
+  const [modal, setModal] = useState(false);
 
   const handleChange = (e: any) => {
     const { name, value } = e.target;
@@ -17,15 +18,30 @@ const Contact = () => {
     console.log(
       `Name: ${formData.name}, Email: ${formData.email}, Message: ${formData.message}`
     );
+    toggleModal();
 
-    alert(
-      "Your Information has been sent, thank you for contacting James Freitag!"
-    );
+    // alert(
+    //   "Your Information has been sent, thank you for contacting James Freitag!"
+    // );
     setFormData({
       name: "",
       email: "",
       message: "",
     });
+  };
+
+  const toggleModal = () => {
+    setModal(true);
+    autoCloseModal();
+  };
+  const closeModal = () => {
+    setModal(false);
+  };
+
+  const autoCloseModal = () => {
+    setTimeout(() => {
+      closeModal();
+    }, 5000);
   };
 
   return (
@@ -46,6 +62,7 @@ const Contact = () => {
           id="name"
           placeholder="Enter your name"
           className="w-full p-1 border mb-4 border-black"
+          required
         />
         <label htmlFor="email" className="text-white font-semibold">
           Email
@@ -58,6 +75,7 @@ const Contact = () => {
           id="email"
           placeholder="Enter your email"
           className="w-full p-1 border mb-4 border-black"
+          required
         />
         <label htmlFor="message" className="text-white font-semibold">
           Message
@@ -71,11 +89,31 @@ const Contact = () => {
           rows={10}
           placeholder="Enter message"
           className="w-full p-1 border mb-4 border-black"
+          required
         ></textarea>
         <button className="w-full py-4 text-white bg-neutral-950 hover:bg-black">
           Submit
         </button>
       </form>
+      {modal && (
+        <div className="fixed bottom-64 right-32 bg-green-900 text-white rounded-xl shadow-xl w-[400px] h-[150px] p-2 flex justify-between items-center mx-auto">
+          <div onClick={autoCloseModal}>
+            <button
+              onClick={closeModal}
+              className="absolute top-4 right-4 bg-red-800 size-7 rounded-full"
+            >
+              X
+            </button>
+          </div>
+          <div>
+            <p className="text-xl font-semibold">Message sent!</p>
+            <p className="text-lg text-gray-300">
+              Thank you for contacting me, I look forward to having a
+              conversation with you!
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
