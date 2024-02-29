@@ -120,7 +120,7 @@ const Contact = () => {
             </button>
           </div>
           <div>
-            <p className="text-xl font-semibold">Message sent!</p>
+            <p className="text-xl pb-2 font-semibold">Message sent!</p>
             <p className="text-lg text-gray-300">
               Thank you for contacting me, I look forward to having a
               conversation with you!
