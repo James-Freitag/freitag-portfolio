@@ -95,6 +95,7 @@ const Contact = () => {
         <label
           htmlFor="fakename"
           className="absolute opacity-0 top-0 left-0 h-0 w-0 z-[-1]"
+          tabIndex={-1}
         ></label>
         <input
           type="text"
@@ -103,6 +104,7 @@ const Contact = () => {
           name="fakename"
           id="fakename"
           className="absolute opacity-0 top-0 left-0 h-0 w-0 z-[-1]"
+          tabIndex={-1}
         />
         {/*---------------------------------------------------- HONEYPOT FIELD END ---------------------------------------------------------------*/}
         <button className="w-full py-4 text-white bg-neutral-950 hover:bg-black">
