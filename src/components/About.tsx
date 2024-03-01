@@ -12,7 +12,7 @@ const About = () => {
   return (
     <div
       id="about"
-      className=" w-full grid grid-cols-1 md:grid-cols-2 py-12 px-4"
+      className=" w-full grid grid-cols-1 lg:grid-cols-2 py-12 px-4"
     >
       <section className="px-2">
         <h2 className=" text-3xl text-center font-semibold underline">
@@ -31,8 +31,8 @@ const About = () => {
           </span>
         </p>
       </section>
-      <section className=" px-2 pb-20">
-        <p className="text-center text-3xl pt-8 md:pt-0 font-semibold underline">
+      <section className=" px-2 pb-20 ">
+        <p className="text-center text-3xl  pt-8 md:pt-0 font-semibold underline">
           Proficiencies
         </p>
         <ul className="grid grid-cols-2 md:grid-cols-4  gap-10 place-items-center md:gap-16 pt-8">
