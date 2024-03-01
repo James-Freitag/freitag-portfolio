@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Resend } from "resend";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -7,6 +8,7 @@ const Contact = () => {
     message: "",
   });
   const [modal, setModal] = useState(false);
+  const resend = new Resend("re_4fUfSHuD_8aCYEEcW6ocPAn1cerxRZhC2");
 
   const handleChange = (e: any) => {
     const { name, value } = e.target;
@@ -15,14 +17,13 @@ const Contact = () => {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    console.log(
-      `Name: ${formData.name}, Email: ${formData.email}, Message: ${formData.message}`
-    );
+    resend.emails.send({
+      from: "onboarding@resend.dev",
+      to: "jamesfreitag05@gmail.com",
+      subject: `${formData.name}`,
+      html: `<p>Email: ${formData.email} Message: ${formData.message}</p>`,
+    });
     toggleModal();
-
-    // alert(
-    //   "Your Information has been sent, thank you for contacting James Freitag!"
-    // );
     setFormData({
       name: "",
       email: "",
@@ -112,7 +113,10 @@ const Contact = () => {
         </button>
       </form>
       {modal && (
-        <div className="fixed bottom-64 right-32 bg-green-900 text-white rounded-xl shadow-xl w-[400px] h-[150px] p-2 flex justify-between items-center mx-auto">
+        <div
+          id="modal"
+          className="fixed bottom-64 right-32 bg-green-900 text-white rounded-xl shadow-xl w-[400px] h-[150px] p-2 flex justify-between items-center mx-auto"
+        >
           <div onClick={autoCloseModal}>
             <button
               onClick={closeModal}
