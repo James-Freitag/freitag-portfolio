@@ -1,16 +1,14 @@
 import profilePic from "../../public/profilePic.jpg";
-// import animatedBg from "../../src/assets/animatedBG.mov";
-import animatedBg from "../../public/new-animated-background.gif";
 
 const Home = () => {
   return (
-    <div className={`home-bg`}>
+    <div>
       <div
         id="dark-overlay"
         className="grid grid-cols-1 md:grid-cols-5 gap-2 md:gap-4 px-4 md:px-8 h-screen w-full mx-auto bg-black/15"
       >
         <video
-          src={animatedBg}
+          src="https://pub-2b6cc574aabe4d108caa4fb7d522f085.r2.dev/animatedBackground.mp4"
           loop
           autoPlay
           muted
