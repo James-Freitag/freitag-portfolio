@@ -16,7 +16,7 @@ const Home = () => {
         />
         <h1
           id="text-shadow"
-          className="md:col-span-3 text-[4.2rem] md:text-[7rem] lg:text-[10rem] text-white font-extrabold h-full pl-0 md:pl-12 pb8 md:pb-0 flex flex-wrap break-all items-center hyphens-manual leading-none tracking-wider ease-in duration-200"
+          className="md:col-span-3 text-[4.1rem] md:text-[7rem] lg:text-[10rem] text-white font-extrabold h-full pl-0 md:pl-12 pb8 md:pb-0 flex flex-wrap break-all items-center hyphens-manual leading-none tracking-wider ease-in duration-200"
         >
           Front
           <br /> End
