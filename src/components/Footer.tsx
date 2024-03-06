@@ -19,7 +19,7 @@ const Footer = () => {
     <div className="flex flex-col justify-center items-center bg-neutral-950 h-48 w-full">
       <footer>
         <div className="flex justify-center items-center pb-4">
-          <button onClick={scrollToTop} className="">
+          <button onClick={scrollToTop} className="animate-bounce">
             <FiArrowUpCircle size={80} color="white" />
           </button>
         </div>

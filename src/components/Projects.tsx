@@ -12,56 +12,100 @@ const Projects = () => {
         Projects
       </p>
       <div>
-        <ul className="flex flex-1 flex-wrap gap-4 px-4 lg:px-12 justify-center items-center text-center">
-          <li className=" text-white text-xl rounded-xl font-semibold min-w-[320px] w-1/3 h-auto">
-            <div className="p-4 bg-neutral-600 rounded-xl ">
-              <Link to="">
-                <img
-                  src={harryPotterSS}
-                  alt="Harry Potter App 1"
-                  className="rounded-xl hover:scale-95"
-                />
-              </Link>
+        <ul className="flex flex-1 flex-wrap gap-6 px-4 lg:px-12 justify-center items-center text-center">
+          <li className=" text-white text-xl rounded-md font-semibold min-w-[320px] w-1/3 h-auto group">
+            <div className="bg-neutral-600 rounded-md relative overflow-hidden">
+              <img
+                src={harryPotterSS}
+                alt="Harry Potter App 1"
+                className="rounded-md hover:opacity-75"
+              />
+              <div className="absolute h-full w-full bg-black/35 flex justify-center items-center -bottom-0 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <Link
+                  target="_blank"
+                  to="https://github.com/James-Freitag/unsplash-potter/blob/master/app/routes/_index.tsx"
+                >
+                  <button className="bg-black text-white px-5 py-2 rounded-md hover:scale-95 hover:bg-neutral-900 ease-in duration-200">
+                    More Info
+                  </button>
+                </Link>
+              </div>
             </div>
           </li>
-          <li className="text-white text-xl rounded-xl font-semibold min-w-[320px] w-1/3 h-auto">
-            <div className="p-4 bg-neutral-600 rounded-xl">
-              <Link to="">
-                <img
-                  src={harryPotterAPI}
-                  alt="Harry Potter App 2"
-                  className="rounded-xl hover:scale-95"
-                />
-              </Link>
+          <li className="text-white text-xl rounded-md font-semibold min-w-[320px] w-1/3 h-auto group">
+            <div className=" bg-neutral-600 rounded-md relative overflow-hidden">
+              <img
+                src={harryPotterAPI}
+                alt="Harry Potter App 2"
+                className="rounded-md hover:opacity-75"
+              />
+              <div className="absolute h-full w-full bg-black/35 flex justify-center items-center -bottom-0 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <Link
+                  target="_blank"
+                  to="https://github.com/James-Freitag/harrypotter-app/blob/master/app/routes/_index.tsx"
+                >
+                  <button className="bg-black text-white px-5 py-2 rounded-md hover:scale-95 hover:bg-neutral-900 ease-in duration-200">
+                    More Info
+                  </button>
+                </Link>
+              </div>
             </div>
           </li>
-          <li className="text-white text-xl rounded-xl font-semibold min-w-[320px] w-1/3 h-auto">
-            <div className="p-4 bg-neutral-600 rounded-xl">
-              <Link to="">
-                <img
-                  src={functionalityProject}
-                  alt="Functionality Project"
-                  className="rounded-xl hover:scale-95"
-                />
-              </Link>
+          <li className="text-white text-xl rounded-md font-semibold min-w-[320px] w-1/3 h-auto group">
+            <div className=" bg-neutral-600 rounded-md relative overflow-hidden">
+              <img
+                src={functionalityProject}
+                alt="Functionality Project"
+                className="rounded-md hover:opacity-75"
+              />
+              <div className="absolute h-full w-full bg-black/35 flex justify-center items-center -bottom-0 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <Link
+                  target="_blank"
+                  to="https://github.com/James-Freitag/react-forms-test/tree/main/src/components"
+                >
+                  <button className="bg-black text-white px-5 py-2 rounded-md hover:scale-95 hover:bg-neutral-900 ease-in duration-200">
+                    More Info
+                  </button>
+                </Link>
+              </div>
             </div>
           </li>
-          <li className="text-white text-xl rounded-xl font-semibold min-w-[320px] w-1/3 h-auto">
-            <div className="p-4 bg-neutral-600 rounded-xl">
+          <li className="text-white text-xl rounded-md font-semibold min-w-[320px] w-1/3 h-auto group">
+            <div className=" bg-neutral-600 rounded-md relative overflow-hidden">
               <img
                 src={portfolioApp}
                 alt="Portfolio App"
-                className="rounded-xl hover:scale-95 hover:opacity-75"
+                className="rounded-md hover:opacity-75"
               />
+              <div className="absolute h-full w-full bg-black/35 flex justify-center items-center -bottom-0 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <Link
+                  target="_blank"
+                  to="https://github.com/James-Freitag/freitag-portfolio/tree/main/src/components"
+                >
+                  <button className="bg-black text-white px-5 py-2 rounded-md hover:scale-95 hover:bg-neutral-900 ease-in duration-200">
+                    More Info
+                  </button>
+                </Link>
+              </div>
             </div>
           </li>
-          <li className="text-white rounded-xl text-xl font-semibold min-w-[320px] w-1/3 h-auto">
-            <div className="p-4 bg-neutral-600 rounded-xl">
+          <li className="text-white rounded-md text-xl font-semibold min-w-[320px] w-1/3 h-auto group">
+            <div className=" bg-neutral-600 rounded-md relative overflow-hidden">
               <img
                 src={reactRouterApp}
                 alt="React Router App"
-                className="rounded-xl hover:scale-95"
+                className="rounded-md hover:opacity-75"
               />
+              <div className="absolute h-full w-full bg-black/35 flex justify-center items-center -bottom-0 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                <Link
+                  target="_blank"
+                  to="https://github.com/James-Freitag/react-types/tree/main/src/components"
+                >
+                  <button className="bg-black text-white px-5 py-2 rounded-md hover:scale-95 hover:bg-neutral-900 ease-in duration-200">
+                    More Info
+                  </button>
+                </Link>
+              </div>
             </div>
           </li>
         </ul>

@@ -21,14 +21,20 @@ const Navbar = () => {
     "text-xl font-semibold w-1/2 text-center pt-2 cursor-pointer";
 
   return (
-    <div className="sticky top-0 w-full h-20 bg-neutral-900 text-white">
+    <div className="sticky top-0 w-full h-20 bg-neutral-900 text-white z-[9999]">
       <div className="flex h-full w-full justify-between items-center px-4 lg:px-8">
         <p className="text-4xl lg:text-6xl font-semibold tracking-wider ease-in duration-300">
           Freitag
         </p>
         <ul className="hidden md:flex gap-4 text-xl lg:text-2xl font-semibold ease-in duration-300">
           <li className="hover:text-neutral-800 hover:bg-white px-2 py-1 rounded-xl ease-in duration-200 cursor-pointer">
-            <Link to="/" spy={true} smooth={true} offset={-90} duration={500}>
+            <Link
+              to="home"
+              spy={true}
+              smooth={true}
+              offset={-90}
+              duration={500}
+            >
               Home
             </Link>
           </li>

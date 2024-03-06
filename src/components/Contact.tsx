@@ -1,34 +1,56 @@
-import { useState } from "react";
-import { Resend } from "resend";
+import { useState, useRef } from "react";
+
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
+  // const [formData, setFormData] = useState({
+  //   name: "",
+  //   email: "",
+  //   message: "",
+  // });
   const [modal, setModal] = useState(false);
-  const resend = new Resend("re_4fUfSHuD_8aCYEEcW6ocPAn1cerxRZhC2");
+  const form = useRef();
 
-  const handleChange = (e: any) => {
-    const { name, value } = e.target;
-    setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
-  };
+  // const handleChange = (e: any) => {
+  //   const { name, value } = e.target;
+  //   setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
+  // };
 
-  const handleSubmit = (e: any) => {
+  // const handleSubmit = async (e: any) => {
+  //   e.preventDefault();
+  //   console.log(`Name: ${formData.name},
+  //   Email: ${formData.email},
+  //   Message: ${formData.message}`);
+
+  //   toggleModal();
+  //   setFormData({
+  //     name: "",
+  //     email: "",
+  //     message: "",
+  //   });
+  // };
+  const sendEmail = (e: any) => {
     e.preventDefault();
-    resend.emails.send({
-      from: "onboarding@resend.dev",
-      to: "jamesfreitag05@gmail.com",
-      subject: `${formData.name}`,
-      html: `<p>Email: ${formData.email} Message: ${formData.message}</p>`,
-    });
     toggleModal();
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
-    });
+    // setFormData({
+    //   name: "",
+    //   email: "",
+    //   message: "",
+    // });
+
+    emailjs
+      .sendForm("service_nzwg885", "template_3ejdg4f", form.current, {
+        publicKey: "l-fv6uRuqrUAlZgxW",
+      })
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          e.target.reset();
+        },
+        (error: any) => {
+          console.log("FAILED...", error.text);
+        }
+      );
   };
 
   const toggleModal = () => {
@@ -51,15 +73,19 @@ const Contact = () => {
       className="flex flex-col items-center justify-center bg-neutral-800 pt-8"
     >
       <h4 className="text-3xl font-semibold underline text-white">Contact</h4>
-      <form onSubmit={handleSubmit} className="max-w-[500px] p-6 text-xl">
+      <form
+        ref={form}
+        onSubmit={sendEmail}
+        className="max-w-[500px] p-6 text-xl"
+      >
         <label htmlFor="name" className="text-white font-semibold">
           Name
         </label>
         <input
           type="text"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
+          name="user_name"
+          // value={formData.name}
+          // onChange={handleChange}
           id="name"
           placeholder="Enter your name"
           className="w-full p-1 border mb-4 border-black"
@@ -70,9 +96,9 @@ const Contact = () => {
         </label>
         <input
           type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
+          name="user_email"
+          // value={formData.email}
+          // onChange={handleChange}
           id="email"
           placeholder="Enter your email"
           className="w-full p-1 border mb-4 border-black"
@@ -83,8 +109,8 @@ const Contact = () => {
         </label>
         <textarea
           name="message"
-          value={formData.message}
-          onChange={handleChange}
+          // value={formData.message}
+          // onChange={handleChange}
           id="message"
           cols={30}
           rows={10}
@@ -94,16 +120,44 @@ const Contact = () => {
         ></textarea>
         {/*---------------------------------------------------- HONEYPOT FIELD START ------------------------------------------------------------ */}
         <label
-          htmlFor="fakename"
+          htmlFor="city"
           className="absolute opacity-0 top-0 left-0 h-0 w-0 z-[-1]"
           tabIndex={-1}
         ></label>
         <input
           type="text"
-          placeholder="Enter your fake name"
+          placeholder="Enter your city"
           autoComplete="off"
-          name="fakename"
-          id="fakename"
+          name="city"
+          id="city"
+          className="absolute opacity-0 top-0 left-0 h-0 w-0 z-[-1]"
+          tabIndex={-1}
+        />
+        <label
+          htmlFor="country"
+          className="absolute opacity-0 top-0 left-0 h-0 w-0 z-[-1]"
+          tabIndex={-1}
+        ></label>
+        <input
+          type="text"
+          placeholder="Enter your country"
+          autoComplete="off"
+          name="country"
+          id="country"
+          className="absolute opacity-0 top-0 left-0 h-0 w-0 z-[-1]"
+          tabIndex={-1}
+        />
+        <label
+          htmlFor="middle name"
+          className="absolute opacity-0 top-0 left-0 h-0 w-0 z-[-1]"
+          tabIndex={-1}
+        ></label>
+        <input
+          type="text"
+          placeholder="Enter your middle name"
+          autoComplete="off"
+          name="middle name"
+          id="middle name"
           className="absolute opacity-0 top-0 left-0 h-0 w-0 z-[-1]"
           tabIndex={-1}
         />
@@ -115,7 +169,7 @@ const Contact = () => {
       {modal && (
         <div
           id="modal"
-          className="fixed bottom-64 right-32 bg-green-900 text-white rounded-xl shadow-xl w-[400px] h-[150px] p-2 flex justify-between items-center mx-auto"
+          className="fixed bottom-64 right-10 bg-green-900 text-white rounded-xl shadow-xl w-[400px] h-[150px] p-2 flex justify-between items-center mx-auto"
         >
           <div onClick={autoCloseModal}>
             <button
