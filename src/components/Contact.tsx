@@ -3,14 +3,15 @@ import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [modal, setModal] = useState(false);
-  const form = useRef();
+  const form = useRef<HTMLFormElement>(null);
 
   const sendEmail = (e: any) => {
     e.preventDefault();
     toggleModal();
+    if (!form.current) return;
 
     emailjs
-      // @ts-ignore
+
       .sendForm("service_nzwg885", "template_3ejdg4f", form.current, {
         publicKey: "l-fv6uRuqrUAlZgxW",
       })
@@ -46,7 +47,6 @@ const Contact = () => {
     >
       <h4 className="text-3xl font-semibold underline text-white">Contact</h4>
       <form
-        // @ts-ignore
         ref={form}
         onSubmit={sendEmail}
         className="max-w-[500px] p-6 text-xl"
