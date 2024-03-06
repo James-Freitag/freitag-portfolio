@@ -1,5 +1,4 @@
 import { useState, useRef } from "react";
-
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
@@ -11,6 +10,7 @@ const Contact = () => {
     toggleModal();
 
     emailjs
+      // @ts-ignore
       .sendForm("service_nzwg885", "template_3ejdg4f", form.current, {
         publicKey: "l-fv6uRuqrUAlZgxW",
       })
@@ -46,6 +46,7 @@ const Contact = () => {
     >
       <h4 className="text-3xl font-semibold underline text-white">Contact</h4>
       <form
+        // @ts-ignore
         ref={form}
         onSubmit={sendEmail}
         className="max-w-[500px] p-6 text-xl"
@@ -85,7 +86,7 @@ const Contact = () => {
           required
         ></textarea>
         {/*---------------------------------------------------- HONEYPOT FIELD START ------------------------------------------------------------ */}
-        <label
+        {/* <label
           htmlFor="city"
           className="absolute opacity-0 top-0 left-0 h-0 w-0 z-[-1]"
           tabIndex={-1}
@@ -126,7 +127,7 @@ const Contact = () => {
           id="middle name"
           className="absolute opacity-0 top-0 left-0 h-0 w-0 z-[-1]"
           tabIndex={-1}
-        />
+        /> */}
         {/*---------------------------------------------------- HONEYPOT FIELD END ---------------------------------------------------------------*/}
         <button className="w-full py-4 text-white bg-neutral-950 hover:bg-black">
           Submit
