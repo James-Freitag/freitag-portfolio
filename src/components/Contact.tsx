@@ -3,40 +3,12 @@ import { useState, useRef } from "react";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-  // const [formData, setFormData] = useState({
-  //   name: "",
-  //   email: "",
-  //   message: "",
-  // });
   const [modal, setModal] = useState(false);
   const form = useRef();
 
-  // const handleChange = (e: any) => {
-  //   const { name, value } = e.target;
-  //   setFormData((prevFormData) => ({ ...prevFormData, [name]: value }));
-  // };
-
-  // const handleSubmit = async (e: any) => {
-  //   e.preventDefault();
-  //   console.log(`Name: ${formData.name},
-  //   Email: ${formData.email},
-  //   Message: ${formData.message}`);
-
-  //   toggleModal();
-  //   setFormData({
-  //     name: "",
-  //     email: "",
-  //     message: "",
-  //   });
-  // };
   const sendEmail = (e: any) => {
     e.preventDefault();
     toggleModal();
-    // setFormData({
-    //   name: "",
-    //   email: "",
-    //   message: "",
-    // });
 
     emailjs
       .sendForm("service_nzwg885", "template_3ejdg4f", form.current, {
@@ -84,8 +56,6 @@ const Contact = () => {
         <input
           type="text"
           name="user_name"
-          // value={formData.name}
-          // onChange={handleChange}
           id="name"
           placeholder="Enter your name"
           className="w-full p-1 border mb-4 border-black"
@@ -97,8 +67,6 @@ const Contact = () => {
         <input
           type="email"
           name="user_email"
-          // value={formData.email}
-          // onChange={handleChange}
           id="email"
           placeholder="Enter your email"
           className="w-full p-1 border mb-4 border-black"
@@ -109,8 +77,6 @@ const Contact = () => {
         </label>
         <textarea
           name="message"
-          // value={formData.message}
-          // onChange={handleChange}
           id="message"
           cols={30}
           rows={10}
