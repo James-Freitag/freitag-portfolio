@@ -7,11 +7,6 @@
     -1px 1px black;
 }
 
-.backdrop-filter {
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-}
-
 .home-bg {
   background-image: url("../public/new-animated-background.gif");
   width: 100%;

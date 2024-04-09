@@ -21,7 +21,7 @@ const Navbar = () => {
     "text-xl font-semibold w-1/2 text-center pt-2 cursor-pointer";
 
   return (
-    <div className="sticky top-0 w-full h-24 bg-neutral-900 bg-opacity-85 backdrop-filter text-white z-[9999]">
+    <div className="sticky top-0 w-full h-24 bg-neutral-900  text-white z-[9999]">
       <nav className="flex h-full w-full justify-between items-center px-4 lg:px-8">
         <p className="text-4xl lg:text-5xl font-semibold tracking-wider ease-in duration-300">
           Freitag
