@@ -12,8 +12,8 @@ const Projects = () => {
         Projects
       </p>
       <div>
-        <ul className="flex flex-1 flex-wrap gap-6 px-4 lg:px-12 justify-center items-center text-center">
-          <li className=" text-white text-xl rounded-md font-semibold min-w-[320px] w-1/3 h-auto group">
+        <ul className="flex flex-1 flex-wrap gap-6 px-4 lg:px-12 justify-center items-center text-center ">
+          <li className=" text-white text-xl rounded-md font-semibold min-w-[320px] w-1/3 h-auto group border-[1px] border-white">
             <div className="bg-neutral-600 rounded-md relative overflow-hidden">
               <img
                 src={harryPotterSS}
@@ -32,7 +32,7 @@ const Projects = () => {
               </div>
             </div>
           </li>
-          <li className="text-white text-xl rounded-md font-semibold min-w-[320px] w-1/3 h-auto group">
+          <li className="text-white text-xl rounded-md font-semibold min-w-[320px] w-1/3 h-auto group border-[1px] border-white">
             <div className=" bg-neutral-600 rounded-md relative overflow-hidden">
               <img
                 src={harryPotterAPI}
@@ -51,7 +51,7 @@ const Projects = () => {
               </div>
             </div>
           </li>
-          <li className="text-white text-xl rounded-md font-semibold min-w-[320px] w-1/3 h-auto group">
+          <li className="text-white text-xl rounded-md font-semibold min-w-[320px] w-1/3 h-auto group border-[1px] border-white">
             <div className=" bg-neutral-600 rounded-md relative overflow-hidden">
               <img
                 src={functionalityProject}
@@ -70,7 +70,7 @@ const Projects = () => {
               </div>
             </div>
           </li>
-          <li className="text-white text-xl rounded-md font-semibold min-w-[320px] w-1/3 h-auto group">
+          <li className="text-white text-xl rounded-md font-semibold min-w-[320px] w-1/3 h-auto group border-[1px] border-white">
             <div className=" bg-neutral-600 rounded-md relative overflow-hidden">
               <img
                 src={portfolioApp}
@@ -89,7 +89,7 @@ const Projects = () => {
               </div>
             </div>
           </li>
-          <li className="text-white rounded-md text-xl font-semibold min-w-[320px] w-1/3 h-auto group">
+          <li className="text-white rounded-md text-xl font-semibold min-w-[320px] w-1/3 h-auto group border-[1px] border-white">
             <div className=" bg-neutral-600 rounded-md relative overflow-hidden">
               <img
                 src={reactRouterApp}

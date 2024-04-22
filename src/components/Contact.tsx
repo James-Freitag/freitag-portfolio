@@ -43,7 +43,7 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="flex flex-col items-center justify-center bg-neutral-800 pt-8"
+      className="flex flex-col items-center justify-center bg-black/25 pt-8"
     >
       <h4 className="text-3xl font-semibold underline text-white">Contact</h4>
       <form
@@ -59,7 +59,7 @@ const Contact = () => {
           name="user_name"
           id="name"
           placeholder="Enter your name"
-          className="w-full p-1 border mb-4 border-black"
+          className="w-full p-1 border mb-4 border-black text-black"
           required
         />
         <label htmlFor="email" className="text-white font-semibold">
@@ -70,7 +70,7 @@ const Contact = () => {
           name="user_email"
           id="email"
           placeholder="Enter your email"
-          className="w-full p-1 border mb-4 border-black"
+          className="w-full p-1 border mb-4 border-black text-black"
           required
         />
         <label htmlFor="message" className="text-white font-semibold">
@@ -82,7 +82,7 @@ const Contact = () => {
           cols={30}
           rows={10}
           placeholder="Enter message"
-          className="w-full p-1 border mb-4 border-black"
+          className="w-full p-1 border mb-4 border-black text-black"
           required
         ></textarea>
         {/*---------------------------------------------------- HONEYPOT FIELD START ------------------------------------------------------------ */}
@@ -129,14 +129,14 @@ const Contact = () => {
           tabIndex={-1}
         /> */}
         {/*---------------------------------------------------- HONEYPOT FIELD END ---------------------------------------------------------------*/}
-        <button className="w-full py-4 text-white bg-neutral-950 hover:bg-black">
+        <button className="w-full py-4 text-white bg-green-800 hover:bg-green-700">
           Submit
         </button>
       </form>
       {modal && (
         <div
           id="modal"
-          className="fixed bottom-64 right-10 bg-green-900 text-white rounded-xl shadow-xl w-[400px] h-[150px] p-2 flex justify-between items-center mx-auto"
+          className="fixed bottom-64 right-10 bg-gray-700 text-white rounded-xl shadow-xl w-[400px] h-[150px] p-2 flex justify-between items-center mx-auto"
         >
           <div onClick={autoCloseModal}>
             <button

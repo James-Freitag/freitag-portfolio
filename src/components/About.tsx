@@ -18,7 +18,7 @@ const About = () => {
         <h2 className=" text-3xl text-center font-semibold underline">
           About Me
         </h2>
-        <p className="max-w-[500px] mx-auto pt-8 indent-4 text-xl leading-9">
+        <p className="max-w-[500px] mx-auto pt-8 pb-4 indent-4 text-xl leading-9">
           Hello, I'm James Freitag. I am a passionate self taught front end web
           developer. I love problem solving and creating accessible, responsive
           designs. Strong communication & techincal skills are essential in a
