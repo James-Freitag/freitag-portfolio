@@ -81,7 +81,7 @@ const Navbar = () => {
           <ul
             className={`${
               navMenu
-                ? "fixed top-16 right-0 pt-12 h-screen w-full flex flex-col items-center gap-8 divide-y-2 divide-gray-400 bg-green-950/35 backdrop-blur-md z-[99999] text-white ease-in-out duration-500"
+                ? "fixed top-16 right-0 pt-12 h-screen w-full flex flex-col items-center gap-8 divide-y-2 divide-gray-400 bg-green-950/85 backdrop-blur-md z-[99999] text-white ease-in-out duration-500"
                 : "fixed top-[-300%]"
             }`}
           >
