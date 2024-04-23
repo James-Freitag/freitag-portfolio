@@ -23,7 +23,7 @@ const Home = () => {
         /> */}
         <h1
           // id="text-shadow"
-          className="md:col-start-2 md:col-span-4 text-[4.1rem] md:text-[6.5rem] text-white font-extrabold px-2 pb-8 md:pb-0 flex flex-wrap items-center leading-none tracking-wider ease-in duration-200"
+          className="col-start-1 md:col-start-2 md:col-span-4 text-[4.1rem] md:text-[6.5rem] text-white font-extrabold px-2 pb-8 md:pb-0 flex flex-wrap items-center leading-none tracking-wider ease-in duration-200"
         >
           Front End Developer
         </h1>
